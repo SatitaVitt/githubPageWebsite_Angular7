@@ -7,6 +7,15 @@
     </div>
 </nav>
 
+<!-- nav -->
+<!--The *ngIf="currentUser" directive renders the nav if the currentUser property contains a value, which indicates that the user is logged in.-->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
 <!-- main content container -->
 <div class="jumbotron">
     <div class="container">
