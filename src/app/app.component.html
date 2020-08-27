@@ -1,18 +1,11 @@
 <!-- nav -->
+<!--The *ngIf="currentUser" directive renders the nav if the currentUser property contains a value, which indicates that the user is logged in.-->
 <nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
         <a class="nav-item nav-link" routerLink="/login">Login</a>
         <a class="nav-item nav-link" routerLink="/register">Register</a>
-    </div>
-</nav>
-
-<!-- nav -->
-<!--The *ngIf="currentUser" directive renders the nav if the currentUser property contains a value, which indicates that the user is logged in.-->
-<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-    <div class="navbar-nav">
-        <a class="nav-item nav-link" routerLink="/">Home</a>
-        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+        <a *ngIf="currentUser" class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
 </nav>
 
@@ -21,6 +14,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">
+                <alert></alert>
                 <router-outlet></router-outlet>
             </div>
         </div>
