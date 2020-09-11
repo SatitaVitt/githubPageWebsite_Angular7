@@ -1,23 +1,9 @@
-<!--
-<h1>Hi {{currentUser.firstName}}!</h1>
-<ul>
-    <li *ngFor="let user of users">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-         <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-    </li>
-</ul>
--->
-
 <!-- Header -->
 
 <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
         <div class="mx-auto text-center">
         <h1 class="mx-auto my-0 text-uppercase">WELCOME</h1> 
-        <li *ngFor="let user of users">
-            {{user.username}} ({{user.firstName}} {{user.lastName}})
-            <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-        </li>
         <h2 class="text-white-50 mx-auto mt-2 mb-5">Here are some of the things I have done, feel free to leave a comment or suggestion at the end 🥳</h2>
         <a href="#about" class="btn btn-primary js-scroll-trigger">Start</a>
         </div>

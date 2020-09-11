@@ -13,6 +13,7 @@ import { appRoutingModule } from './app.routing';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
+import { UserpageComponent } from './userpage';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AlertComponent } from './_components';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+        UserpageComponent
        
     ],
     providers: [
