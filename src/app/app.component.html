@@ -1,22 +1,146 @@
 <!-- nav -->
 <!--The *ngIf="currentUser" directive renders the nav if the currentUser property contains a value, which indicates that the user is logged in.-->
-<nav class="navbar navbar-expand navbar-dark bg-dark">
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark">
     <div class="navbar-nav">
         <a class="nav-item nav-link" routerLink="/">Home</a>
         <a class="nav-item nav-link" routerLink="/login">Login</a>
         <a class="nav-item nav-link" routerLink="/register">Register</a>
         <a *ngIf="currentUser" class="nav-item nav-link" (click)="logout()">Logout</a>
     </div>
-</nav>
+</nav>-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">SATITA VITTAYAAREEKUL</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#games">Games</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#draws">Draws</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+          </li>
+          <a class="nav-item nav-link" routerLink="/login">Login</a>
+          <a class="nav-item nav-link" routerLink="/register">Register</a>
+          <a *ngIf="currentUser" class="nav-item nav-link" (click)="logout()">Logout</a>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!--
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">WELCOME</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5">Here are some of the things I have done, feel free to leave a comment or suggestion at the end 🥳</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Start</a>
+      </div>
+    </div>
+  </header>
+-->
+  
 
 <!-- main content container -->
 <div class="jumbotron">
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2">
+                
                 <alert></alert>
                 <router-outlet></router-outlet>
             </div>
         </div>
     </div>
 </div>
+
+
+<section class="signup-section navbar-expand-lg bg-black bottom" id="signup">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Comment/Suggestions 🤓</h2>
+
+          
+
+        </div>
+      </div>
+    </div>
+</section>
+  
+    
+<section class="contact-section navbar-expand-lg bg-black" id="contact">
+  
+    <div class="container">
+      <div class = "row">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">????</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">blablabla</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">sv439@scarletmail.rutgers.edu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                +1 (848)252-8552
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+      
+      
+        <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+                <a href="https://www.linkedin.com/in/satita-vittayaareekul/"><i class="fab fa-linkedin"></i></a>
+            </a>
+            <a href="#" class="mx-2">
+                <a href="https://github.com/SatitaVitt"><i class="fab fa-github"></i> </a>
+
+            </a>
+        </div>
+      
+      
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Your Website 2020
+    </div>
+  </footer>

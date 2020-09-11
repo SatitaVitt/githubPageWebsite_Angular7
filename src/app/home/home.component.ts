@@ -9,8 +9,10 @@ export class HomeComponent implements OnInit {
     users = [];
 
     constructor(
+        
         private authenticationService: AuthenticationService,
         private userService: UserService
+        
     ) {
         this.currentUser = this.authenticationService.currentUserValue;
     }
